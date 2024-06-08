@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cruds.css">
+</head>
+<body>
+    
+<div class="crud">
+    <div class="head">
+            <h2>cruds</h2>
+            <p>product management system</p>
+    </div>
+    <div class="inputs">
+        <input type="text" id="title" placeholder="title">
+        <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+            <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count">
+        <input type="text" id="category" placeholder="category">
+        <button id="submit">create</button>
+    </div>
+    <div class="outputs">
+<div class="searchBlock">
+<input onkeyup="SearchData(this.value)" type="text" id="text" placeholder="Search">
+<div class="btnsSearch">
+    <button onclick="getSearchMod(this.id)"  id="btnByTitle">Search By Title</button>
+    <button onclick="getSearchMod(this.id)"  id="btnByCategory">Search By Category</button>
+</div>
+
+</div>
+<div class="display" id="deleteAll">
+    <button onclick="deleteAll()">Delete All <span id="numP"></span> </button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>dsicount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody id ="tbody">
+      
+    </tbody>
+    
+</table>
+    </div>
+</div>
+    <script type="text/JavaScript" src="cruds.js" ></script>
+</body>
+</html>
